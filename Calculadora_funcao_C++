@@ -1,0 +1,138 @@
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
+#include <math.h>
+#include <locale.h>
+
+using namespace std;
+
+float Soma(float a, float b){
+    return a+b;
+}
+
+float Subtracao(float a, float b){
+    return a-b;
+}
+
+float Multiplicacao(float a, float b){
+    return a*b;
+}
+
+float Divisao(float a, float b){
+    return a/b;
+}
+
+int Potenciacao(int a, int b){
+    return pow(a,b);
+}
+
+int Raiz(int a){
+    return sqrt(a);
+}
+
+int Fatorial(int a, int i){
+    for(i=1; a>1; a--) 
+    {
+      i=a*i; 
+      
+    }
+    return i;
+}
+
+ int ParImpar (int a){
+    if (a % 2 == 0){
+        return 1;
+    }else{
+        return 2;
+}
+} 
+
+int main()
+{
+    int opcao, aux, inum1, inum2;
+    float fnum1, fnum2;
+    
+    setlocale (LC_ALL, "Portuguese");
+    
+    cout<<"\t -------------------------------------"<<endl<<endl;
+    cout<<"\t Bem-vindo a calculadora!"<<endl<<endl;
+    cout<<"\t 1) Soma"<<endl;
+    cout<<"\t 2) Subtração"<<endl;
+    cout<<"\t 3) Multiplicação"<<endl;
+    cout<<"\t 4) Divisão"<<endl;
+    cout<<"\t 5) Potenciação"<<endl;
+    cout<<"\t 6) Raiz quadrada"<<endl;
+    cout<<"\t 7) Fatorial"<<endl;
+    cout<<"\t 8) Determinar se é par ou ímpar"<<endl<<endl;
+    cout<<"\t -------------------------------------"<<endl;
+    
+    cout<<"Escolha a opção que deseja: ";
+    cin>> opcao;
+    //cout<<opcao; 
+    cout<<endl;
+    
+    
+    if (opcao == 1){ //Soma
+    
+        cout<<"Insira dois valores: ";
+        cin>> fnum1>> fnum2;
+        cout<<Soma(fnum1, fnum2);
+        
+    } else if (opcao == 2){ //Subtração
+    
+        cout<<"Primeiro-Segundo"<<endl;
+        
+        cout<<"Insira dois valores: ";
+        cin>> fnum1>> fnum2;
+        cout<<Subtracao(fnum1, fnum2);
+        
+    } else if (opcao == 3){ //Multiplicação
+        
+        cout<<"Insira dois valores: ";
+        cin>> fnum1>> fnum2;
+        cout<<Multiplicacao(fnum1, fnum2);
+        
+    } else if (opcao == 4){ //Divisão
+        
+        cout<<"Primeiro/Segundo"<<endl;
+        
+        cout<<"Insira dois valores: ";
+        cin>> fnum1>> fnum2;
+        cout<<Divisao(fnum1, fnum2);
+        
+    } else if (opcao == 5){ //Potenciação
+        
+        cout<<"Primeiro^Segundo"<<endl;
+        
+        cout<<"Insira dois valores: ";
+        cin>> inum1>> inum2;
+    cout<<Potenciacao(inum1, inum2);
+        
+    } else if (opcao == 6){ //Raiz Quadrada
+        
+        cout<<"Insira um valor: ";
+        cin>> inum1;
+        cout<<Raiz(inum1);
+        
+    } else if (opcao == 7){ //Fatorial
+        
+        cout<<"Insira um valor: ";
+        cin>> inum1;
+        cout<<Fatorial(inum1, aux);
+        
+    } else if(opcao == 8){
+        cout<<"Insira um valor: ";
+        cin>> inum1;
+        aux= ParImpar(inum1);
+        if (aux == 1){
+            cout <<"Par";
+        }else{
+            cout<<"Ímpar";
+        }
+        
+    } else{
+        cout<<"Erro";
+    }
+    
+   return 0;
+}
