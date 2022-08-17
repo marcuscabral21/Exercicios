@@ -30,6 +30,12 @@ int main()
     //cout<<opcao; 
     cout<<endl;
     
+    if (opcao <= 0 || opcao>8){
+        cout<<"Erro";
+        system ("pause");
+        return 0;
+    } 
+    
     switch(opcao)
 {
     case 1: //Soma
