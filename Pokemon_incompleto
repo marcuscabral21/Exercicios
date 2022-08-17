@@ -1,0 +1,164 @@
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
+#include <locale.h>
+#include <cstdlib>
+
+using namespace std;
+
+void menu(){
+    cout<<" -------------------------------------"<<endl<<endl; 
+    cout<<" Nessa batalha Pokémon, ganha o"<<endl;
+    cout<<" Pokémon que tiver o melhor tipo"<<endl; 
+    cout<<" contra o outro."<<endl<<endl;
+    
+    cout<<" 1)Começar as batalhas: "<<endl;
+    cout<<" 0)Sair! "<<endl<<endl;
+    
+
+    cout<<" -------------------------------------"<<endl<<endl;
+}
+
+void tipos(){
+    cout<<"Os tipos de Pokémon são: "<<endl;
+    cout<<"Elétrico -> Pikachu"<<endl;
+    cout<<"Fogo -> Charmander "<<endl;
+    cout<<"Água -> Squirtle"<<endl;
+    cout<<"Pedra -> Onix"<<endl;
+    cout<<"Lutador -> Lucario"<<endl;
+    cout<<"Aéreo -> Pidgey"<<endl;
+    cout<<"Grama -> Bulbasaur"<<endl<<endl;
+        
+    cout<<"Tipos que vencem cada um:"<<endl;
+    cout<<"Elétrico vence Água e Voador"<<endl;
+    cout<<"Fogo vence Grama"<<endl;
+    cout<<"Água vence Fogo e Pedra"<<endl;
+    cout<<"Pedra vence elétrico e Aéreo"<<endl;
+    cout<<"Lutador vence Pedra"<<endl;
+    cout<<"Aéreo vence Lutador e Grama"<<endl;
+    cout<<"Grama vence Água"<<endl;
+}
+
+int main()
+{
+    setlocale(LC_ALL, "Portugues");
+    int opcao, i, aux;
+    char pokemon;
+    
+    menu();
+    
+    cout<< " Escolha uma opção: "<<endl;
+    cin>> opcao;
+    cout<<endl;
+    
+    
+    if(opcao == 1){
+        tipos();
+        
+        for (i=0; i<2; i++){
+            aux= 1+(rand()%7);
+        }
+        
+        cout<<endl;
+        cout<<"Vamos batalhar!"<<endl<<endl;
+        
+        if(aux == 1){
+            
+            cout<<"O treinador inimigo usou um Pikachu "<<endl;
+            cout<<"Escolha um pokémon para lutar: "<<endl;
+            cin>>pokemon;
+            
+            if (pokemon == onix || pokemon == Onix){
+                cout<<"Você venceu!"<<endl;
+            }else{
+                cout<<"Você perdeu!"<<endl;
+            }
+            
+        }else if (aux == 2){
+            
+            cout<<"O treinador inimigo usou um Charmander"<<endl;
+            cout<<"Escolha um pokémon para lutar: "<<endl;
+            cin>>pokemon;
+            
+            if (pokemon == squirtle || pokemon == Squirtle){
+                cout<<"Você venceu!"<<endl;
+            }else{
+                cout<<"Você perdeu!"<<endl;
+            }
+            
+        }else if (aux == 3){
+            
+            cout<<"O treinador inimigo usou um Squirtle"<<endl;
+            cout<<"Escolha um pokémon para lutar: "<<endl;
+            cin>>pokemon;
+            
+            if(pokemon == Pikachu ||pokemon == pikachu || pokemon == Bulbasaur ||pokemon == bulbasaur){
+                cout<<"Você venceu!"<<endl;
+            }else{
+                cout<<"Você perdeu!"<<endl;
+            }
+            
+        }else if (aux == 4){
+            
+            cout<<"O treinador inimigo usou um Onix"<<endl;
+            cout<<"Escolha um pokémon para lutar: "<<endl;
+            cin>>pokemon;
+            
+            if(pokemon == Squirtle ||pokemon == squirtle || pokemon == Lucario ||pokemon == lucario){
+                cout<<"Você venceu!"<<endl;
+            }else{
+                cout<<"Você perdeu!"<<endl;
+            }
+            
+        }else if (aux == 5){
+            
+            cout<<"O treinador inimigo usou um Lucario"<<endl;
+            cout<<"Escolha um pokémon para lutar: "<<endl;
+            cin>>pokemon;
+            
+            if(pokemon == Pidgey ||pokemon == pidgey){
+                cout<<"Você venceu!"<<endl;
+            }else{
+                cout<<"Você perdeu!"<<endl;
+            }
+            
+        }else if (aux == 6){
+            
+            cout<<"O treinador inimigo usou um Pidgey"<<endl;
+            cout<<"Escolha um pokémon para lutar: "<<endl;
+            cin>>pokemon;
+            
+            if(pokemon == Pikachu ||pokemon == pikachu || pokemon == Onix ||pokemon == onix){
+                cout<<"Você venceu!"<<endl;
+            }else{
+                cout<<"Você perdeu!"<<endl;
+            }
+            
+        }else if (aux == 7){
+            
+            cout<<"O treinador inimigo usou um Bulbasaur"<<endl;
+            cout<<"Escolha um pokémon para lutar: "<<endl;
+            cin>>pokemon;
+            
+            if(pokemon == Charmander ||pokemon == charmander || pokemon == Pidgey ||pokemon == pidgey){
+                cout<<"Você venceu!"<<endl;
+            }else{
+                cout<<"Você perdeu!"<<endl;
+            }
+            
+        }else{
+            cout<<"error!";
+            return 0;
+        }
+        
+        
+        
+    }else if(opcao == 0){
+        return 0;
+        
+    }else{
+        main();
+    }
+    
+    return 0;
+}
