@@ -1,0 +1,118 @@
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
+#include <math.h>
+#include <locale.h>
+
+using namespace std;
+
+int main()
+{
+    int opcao, aux, inum1, inum2;
+    float fnum1, fnum2;
+    
+    setlocale (LC_ALL, "Portuguese");
+    
+    cout<<"\t -------------------------------------"<<endl<<endl;
+    cout<<"\t Bem-vindo a calculadora!"<<endl<<endl;
+    cout<<"\t 1) Soma"<<endl;
+    cout<<"\t 2) Subtração"<<endl;
+    cout<<"\t 3) Multiplicação"<<endl;
+    cout<<"\t 4) Divisão"<<endl;
+    cout<<"\t 5) Potenciação"<<endl;
+    cout<<"\t 6) Raiz quadrada"<<endl;
+    cout<<"\t 7) Fatorial"<<endl;
+    cout<<"\t 8) Determinar se é par ou ímpar"<<endl<<endl;
+    cout<<"\t -------------------------------------"<<endl;
+    
+    cout<<"Escolha a opção que deseja: ";
+    cin>> opcao;
+    //cout<<opcao; 
+    cout<<endl;
+    
+    switch(opcao)
+{
+    case 1: //Soma
+    
+    cout<<"Insira dois números: ";
+    cin>> fnum1 >> fnum2;
+    cout<<fnum1+fnum2;
+    
+    break;
+    
+    case 2: //Subtração
+    
+    cout<<"(Primeiro-segundo)"<<endl;
+    
+    cout<<"Insira dois números: ";
+    cin>> fnum1 >> fnum2;
+    cout<<fnum1-fnum2;
+    
+    break;
+    
+    case 3: //Multiplicação
+    
+    cout<<"Insira dois números: ";
+    cin>> fnum1 >> fnum2;
+    cout<<fnum1*fnum2;
+    
+    break;
+    
+    case 4: //Divisão
+    
+    cout<<"(Primeiro/segundo)"<<endl;
+    
+    cout<<"Insira dois números: ";
+    cin>> fnum1 >> fnum2;
+    cout<<fnum1/fnum2;
+    
+    break;
+    
+    case 5: //Potenciação
+    
+    cout<<"(Primeiro^segundo)"<<endl;
+    
+    cout<<"Insira dois números: ";
+    cin>> inum1 >> inum2;
+    cout<<pow(inum1,inum2);
+    
+    break;
+    
+    case 6: //Raiz quadrada
+    
+    cout<<"Insira um número: ";
+    cin>> inum1;
+    cout<<sqrt(inum1);
+    
+    break;
+    
+    case 7: //Fatorial
+    
+    cout<<"Insira um número: ";
+    cin>> inum1;
+    
+    for(aux=1; inum1>1; inum1--) 
+    {
+      aux=inum1*aux; 
+      
+    }
+    
+    cout<<aux;
+    
+    break; 
+    
+    case 8: //Par ou Ímpar
+
+    cout<<"Insira um número: ";
+    cin>> inum1;
+    
+   if (inum1 % 2 == 0){
+       cout<<"O número é par"<<endl;
+   }else{
+       cout<<"O número é ímpar"<<endl;
+   }
+    break; 
+    
+    return 0;
+}
+}
