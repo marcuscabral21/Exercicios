@@ -26,7 +26,7 @@ void tipos(){
     cout<<"Água -> Squirtle"<<endl;
     cout<<"Pedra -> Onix"<<endl;
     cout<<"Lutador -> Lucario"<<endl;
-    cout<<"Aéreo -> Pidgey"<<endl;
+    cout<<"Aéreo -> Hoothoot"<<endl;
     cout<<"Grama -> Bulbasaur"<<endl<<endl;
         
     cout<<"Tipos que vencem cada um:"<<endl;
@@ -43,7 +43,7 @@ int main()
 {
     setlocale(LC_ALL, "Portugues");
     int opcao, i, aux;
-    char pokemon;
+    char pokemon1, pokemon2, pokemon3, pokemon4, pokemon5, pokemon6, pokemon7;
     
     menu();
     
@@ -54,6 +54,8 @@ int main()
     
     if(opcao == 1){
         tipos();
+        cout<<endl<<endl;
+        cout<<"Aviso: Para escolher o Pokémon, basta por a primeira letra de seu nome (Exemplo: Pikachu -> p)."<<endl;
         
         for (i=0; i<2; i++){
             aux= 1+(rand()%7);
@@ -66,9 +68,9 @@ int main()
             
             cout<<"O treinador inimigo usou um Pikachu "<<endl;
             cout<<"Escolha um pokémon para lutar: "<<endl;
-            cin>>pokemon;
+            cin>>pokemon1;
             
-            if (pokemon == onix || pokemon == Onix){
+            if (pokemon1 == 'o'){
                 cout<<"Você venceu!"<<endl;
             }else{
                 cout<<"Você perdeu!"<<endl;
@@ -78,9 +80,9 @@ int main()
             
             cout<<"O treinador inimigo usou um Charmander"<<endl;
             cout<<"Escolha um pokémon para lutar: "<<endl;
-            cin>>pokemon;
+            cin>>pokemon2;
             
-            if (pokemon == squirtle || pokemon == Squirtle){
+            if (pokemon2 == 's'){
                 cout<<"Você venceu!"<<endl;
             }else{
                 cout<<"Você perdeu!"<<endl;
@@ -90,9 +92,9 @@ int main()
             
             cout<<"O treinador inimigo usou um Squirtle"<<endl;
             cout<<"Escolha um pokémon para lutar: "<<endl;
-            cin>>pokemon;
+            cin>>pokemon3;
             
-            if(pokemon == Pikachu ||pokemon == pikachu || pokemon == Bulbasaur ||pokemon == bulbasaur){
+            if(pokemon3 == 'p' || pokemon3 == 'b'){
                 cout<<"Você venceu!"<<endl;
             }else{
                 cout<<"Você perdeu!"<<endl;
@@ -102,9 +104,9 @@ int main()
             
             cout<<"O treinador inimigo usou um Onix"<<endl;
             cout<<"Escolha um pokémon para lutar: "<<endl;
-            cin>>pokemon;
+            cin>>pokemon4;
             
-            if(pokemon == Squirtle ||pokemon == squirtle || pokemon == Lucario ||pokemon == lucario){
+            if(pokemon4 == 's' || pokemon4 == 'l'){
                 cout<<"Você venceu!"<<endl;
             }else{
                 cout<<"Você perdeu!"<<endl;
@@ -114,9 +116,9 @@ int main()
             
             cout<<"O treinador inimigo usou um Lucario"<<endl;
             cout<<"Escolha um pokémon para lutar: "<<endl;
-            cin>>pokemon;
+            cin>>pokemon5;
             
-            if(pokemon == Pidgey ||pokemon == pidgey){
+            if(pokemon5 == 'h'){
                 cout<<"Você venceu!"<<endl;
             }else{
                 cout<<"Você perdeu!"<<endl;
@@ -124,11 +126,11 @@ int main()
             
         }else if (aux == 6){
             
-            cout<<"O treinador inimigo usou um Pidgey"<<endl;
+            cout<<"O treinador inimigo usou um Hoothoot"<<endl;
             cout<<"Escolha um pokémon para lutar: "<<endl;
-            cin>>pokemon;
+            cin>>pokemon6;
             
-            if(pokemon == Pikachu ||pokemon == pikachu || pokemon == Onix ||pokemon == onix){
+            if(pokemon6 == 'p' || pokemon6 == 'o'){
                 cout<<"Você venceu!"<<endl;
             }else{
                 cout<<"Você perdeu!"<<endl;
@@ -138,9 +140,9 @@ int main()
             
             cout<<"O treinador inimigo usou um Bulbasaur"<<endl;
             cout<<"Escolha um pokémon para lutar: "<<endl;
-            cin>>pokemon;
+            cin>>pokemon7;
             
-            if(pokemon == Charmander ||pokemon == charmander || pokemon == Pidgey ||pokemon == pidgey){
+            if(pokemon7 == 'c' || pokemon7 == 'h'){
                 cout<<"Você venceu!"<<endl;
             }else{
                 cout<<"Você perdeu!"<<endl;
